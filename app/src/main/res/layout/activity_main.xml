@@ -13,6 +13,12 @@
         
         android:text="DATA!"
         android:id="@+id/tv_show"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+
+    >
 
     <Button
         android:layout_width="wrap_content"
@@ -20,8 +26,17 @@
         android:text="Connect"
         android:id="@+id/bt_connect"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_weight="1"
+        />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cencel"
+        android:layout_weight="1"
+        android:id="@+id/bt_cencel"
+         />
+</LinearLayout>
 
 
 </RelativeLayout>

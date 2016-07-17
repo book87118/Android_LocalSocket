@@ -104,7 +104,6 @@ public class AddView extends FrameLayout {
                 imageView.setImageResource(R.drawable.direction_down);
                 mAnimatorSet.play(hideAnimator);
                 mAnimatorSet.start();
-                Toast.makeText(getContext(),"Guesture Up!",Toast.LENGTH_SHORT).show();
 
                 break;
             case "Left":
@@ -135,7 +134,7 @@ public class AddView extends FrameLayout {
     public void setAddView(){
 
         if(isAddView){
-            Log.d("gusture","removeView");
+            Log.d(TAG,"removeView");
             mWindowManager.removeView(this);
             isAddView = false;
         }else{
