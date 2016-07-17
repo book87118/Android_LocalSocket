@@ -23,11 +23,14 @@ public class ClientConnect {
     private int timeout = 30000;
     private Parameter mParameter = new Parameter();
     private BufferedReader is = null;
+    private Boolean isClientThreadRun;
     ClientCallBack mClientCallBack;
+
     public ClientConnect(Context context,ClientCallBack clientCallBack ) {
         mContext = context;
         mClientCallBack = clientCallBack;
         client = new LocalSocket();
+        isClientThreadRun = false;
     }
     public boolean connect() {
         try {
@@ -42,23 +45,26 @@ public class ClientConnect {
             return false;
         }
     }
-    final Handler mHandler = new Handler();
+    Handler mHandler = new Handler();
     Runnable run;
     public void getData(){
 
-          run = new Runnable(){
+        if(!isClientThreadRun) {
+            run = new Runnable() {
                 @Override
                 public void run() {
-                Log.d(TAG,"Loop");
-                mHandler.postDelayed(this,1000);
+                    mHandler.postDelayed(this, 1000);
                     recv();
 
                 }
             };
-        mHandler.post(run);
+            mHandler.post(run);
+            isClientThreadRun = true;
+
+        }
+     }
 
 
-    }
 
     private void recv (){
         try {
@@ -75,9 +81,8 @@ public class ClientConnect {
 
     }
     public void cencel(){
-
-            mHandler.removeCallbacks(run);
-
+          mHandler.removeCallbacks(run);
+         isClientThreadRun  = false;
 
     }
 

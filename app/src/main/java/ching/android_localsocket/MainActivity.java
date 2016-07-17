@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity implements ClientCallBack {
         mClientConnect = new ClientConnect(this,this);
     if(mClientConnect.connect() == false){
         mClientConnect.connect();
-    }
-
+     }
 
     }
 
