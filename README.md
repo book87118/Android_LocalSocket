@@ -13,5 +13,11 @@ In this project, I will try to create LocalSocket and LocalSocketServer also,and
     * Clikc the Start button 
     * Client connect to Server 
     * Client receive Data (Server gives randomly data)
-    * Moblie will pop up picture that client recived data befor
+    * Moblie would pop up pictures that client recived data befor.
+    
+ 
+If you have any suggestions or find any errors, welecome to open a new issue(sending Email to me is OK!)
+
+
+
 
