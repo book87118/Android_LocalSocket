@@ -2,8 +2,9 @@
 
 
 ===========================
-It is a demo for LocalSocket.
-In this project, I will try to create LocalSocket and LocalSocketServer also,and then I will use Clinet to connect Server.
+This is a demo for LocalSocket in Android
+In this project, I used [LocalSocket](https://developer.android.com/reference/android/net/LocalSocket.html) and [LocalSocketServer](https://developer.android.com/reference/android/net/LocalServerSocket.html)both.
+They would communicate eath other and show their reasults into Main UI
 ****
 #####　　　　　　　　　　　　Author:Ching-Jing
 #####　　　　　　　　　 E-mail:book87118@gmail.com
